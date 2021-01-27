@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge</title>
+</head>
+<body>
+
+    <script>
+        const userResponse = prompt ('yo, user give me a number')
+        const userResponse2= prompt ('yo, user give me a number')
+        console.log(parseInt(userResponse), parseInt(userResponse2))
+
+        function askForANumber () {
+            const numberString = prompt ('yo, user give me a number');
+
+            const numberMaybe = parseInt(userResponse);
+
+            if (isNaN(numberMaybe)) {
+                console.log('that is not a number!');
+                askForANumber();
+            } else {
+                console.log('thank you');
+                return numberMaybe;
+            }
+
+            askForANumber();
+        }
+
+    </script>
+    
+</body>
+</html>
